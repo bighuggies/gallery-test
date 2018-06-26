@@ -1,14 +1,20 @@
-<h1>Gallery</h1>
+<h1 class="app-title">Gallery</h1>
 
-<label for="search">Search</label>
-<input type="search" id="search" class="form-control" [formControl]="searchField">
+<div class="form-group">
+  <label for="search">Search</label>
+  <input type="search" id="search" class="form-control" [formControl]="searchField">
+</div>
 
 <app-paging-control [pageNumber]="pageNumber" (prevPage)="prevPage()" (nextPage)="nextPage()">
 </app-paging-control>
 
-<ng-container *ngIf="isLoading">Loading...</ng-container>
+<div class="app-content">
+  <ng-container *ngIf="isLoading">
+    Loading...
+  </ng-container>
 
-<app-photo-list [photos]="photos$ | async"></app-photo-list>
+  <app-photo-list [photos]="photos$ | async"></app-photo-list>
+</div>
 
 <app-paging-control [pageNumber]="pageNumber" (prevPage)="prevPage()" (nextPage)="nextPage()">
 </app-paging-control>

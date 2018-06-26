@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  padding: 3rem 1rem;
+}
+
+@media (min-width: 720px) {
+  :host {
+    padding: 4rem 8rem;
+    max-width: 1280px;
+  }
+}
+
+.app-title {
+  margin-bottom: 4rem;
+}
+
+.app-content {
+  margin: 3rem 0;
+}

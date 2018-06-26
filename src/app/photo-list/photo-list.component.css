@@ -4,4 +4,13 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.photos-item {
+  margin: 0.5rem;
 }
