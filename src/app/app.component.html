@@ -5,10 +5,20 @@
 
 <ng-container *ngIf="isLoading">Loading...</ng-container>
 
+<button type="button" class="btn" (click)="prevPage()" [disabled]="pageNumber <= 1">
+  Previous
+</button>
+
+<span>Page: {{ pageNumber }}</span>
+
+<button type="button" class="btn" (click)="nextPage()">
+  Next
+</button>
+
 <ul class="photos">
   <li *ngFor="let photo of photos$ | async; trackBy:trackByFn" class="photos-item">
     <div class="card photo-card">
-      <img [src]="photo.thumbnailUrl" alt="" class="card-img-top">
+      <img [src]="photo.thumbnailUrl" alt="" class="card-img-top photo-img">
 
       <div class="card-body">
         <h5 class="card-title">{{ photo.title }}</h5>
