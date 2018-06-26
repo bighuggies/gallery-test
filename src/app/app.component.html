@@ -1,3 +1,16 @@
 <h1>Gallery</h1>
 
+<ul class="photos">
+  <li *ngFor="let photo of photos" class="photos-item">
+    <div class="card photo-card">
+      <img [src]="photo.thumbnailUrl" alt="" class="card-img-top">
+
+      <div class="card-body">
+        <h5 class="card-title">{{ photo.title }}</h5>
+      </div>
+    </div>
+
+  </li>
+</ul>
+
 <router-outlet></router-outlet>

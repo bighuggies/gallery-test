@@ -7,12 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  photos: Photo[] = [];
+
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
     this.http
       .get<Photo[]>('http://jsonplaceholder.typicode.com/photos')
-      .subscribe(p => console.log(p));
+      .subscribe(photos => (this.photos = photos));
   }
 }
 
