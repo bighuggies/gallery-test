@@ -7,9 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PhotoCardComponent } from './photo-card/photo-card.component';
 import { PagingControlComponent } from './paging-control/paging-control.component';
+import { PhotoListComponent } from './photo-list/photo-list.component';
 
 @NgModule({
-  declarations: [AppComponent, PhotoCardComponent, PagingControlComponent],
+  declarations: [AppComponent, PhotoCardComponent, PagingControlComponent, PhotoListComponent],
   imports: [
     BrowserModule,
     HttpClientModule,

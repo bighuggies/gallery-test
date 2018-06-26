@@ -1,0 +1,5 @@
+<ul class="photos">
+  <li *ngFor="let photo of photos; trackBy:trackByFn" class="photos-item">
+    <app-photo-card [photo]="photo"></app-photo-card>
+  </li>
+</ul>

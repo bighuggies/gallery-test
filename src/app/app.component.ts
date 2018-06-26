@@ -46,10 +46,6 @@ export class AppComponent implements OnInit {
     });
   }
 
-  trackByFn(i: number, photo: Photo) {
-    return photo.id;
-  }
-
   nextPage() {
     this.pageNumber = this.pageNumber + 1;
 

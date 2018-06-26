@@ -8,11 +8,7 @@
 
 <ng-container *ngIf="isLoading">Loading...</ng-container>
 
-<ul class="photos">
-  <li *ngFor="let photo of photos$ | async; trackBy:trackByFn" class="photos-item">
-    <app-photo-card [photo]="photo"></app-photo-card>
-  </li>
-</ul>
+<app-photo-list [photos]="photos$ | async"></app-photo-list>
 
 <app-paging-control [pageNumber]="pageNumber" (prevPage)="prevPage()" (nextPage)="nextPage()">
 </app-paging-control>
