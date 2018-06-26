@@ -3,15 +3,8 @@
 <label for="search">Search</label>
 <input type="search" id="search" class="form-control" [formControl]="searchField">
 
-<button type="button" class="btn" (click)="prevPage()" [disabled]="pageNumber <= 1">
-  Previous
-</button>
-
-<span>Page: {{ pageNumber }}</span>
-
-<button type="button" class="btn" (click)="nextPage()">
-  Next
-</button>
+<app-paging-control [pageNumber]="pageNumber" (prevPage)="prevPage()" (nextPage)="nextPage()">
+</app-paging-control>
 
 <ng-container *ngIf="isLoading">Loading...</ng-container>
 
@@ -21,4 +14,5 @@
   </li>
 </ul>
 
-<router-outlet></router-outlet>
+<app-paging-control [pageNumber]="pageNumber" (prevPage)="prevPage()" (nextPage)="nextPage()">
+</app-paging-control>
