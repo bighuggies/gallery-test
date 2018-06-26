@@ -5,13 +5,3 @@
   display: flex;
   flex-wrap: wrap;
 }
-
-.photo-card {
-  height: 100%;
-  width: 150px;
-}
-
-.photo-img {
-  width: 150px;
-  height: 150px;
-}

@@ -4,6 +4,8 @@ import { FormControl } from '@angular/forms';
 import { combineLatest, fromEvent, Observable, Subject, timer } from 'rxjs';
 import { debounce, map, tap } from 'rxjs/operators';
 
+import { Photo } from './Photo';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -59,12 +61,4 @@ export class AppComponent implements OnInit {
 
     this.currentPage$.next(this.pageNumber);
   }
-}
-
-export interface Photo {
-  albumId: number;
-  id: number;
-  title: string;
-  url: string;
-  thumbnailUrl: string;
 }
