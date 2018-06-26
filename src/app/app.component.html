@@ -3,6 +3,8 @@
 <label for="search">Search</label>
 <input type="search" id="search" class="form-control" [formControl]="searchField">
 
+<ng-container *ngIf="isLoading">Loading...</ng-container>
+
 <ul class="photos">
   <li *ngFor="let photo of photos$ | async" class="photos-item">
     <div class="card photo-card">
