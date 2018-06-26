@@ -1,7 +1,10 @@
 <h1>Gallery</h1>
 
+<label for="search">Search</label>
+<input type="search" id="search" class="form-control" [formControl]="searchField">
+
 <ul class="photos">
-  <li *ngFor="let photo of photos" class="photos-item">
+  <li *ngFor="let photo of photos$ | async" class="photos-item">
     <div class="card photo-card">
       <img [src]="photo.thumbnailUrl" alt="" class="card-img-top">
 
