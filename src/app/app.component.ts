@@ -34,6 +34,10 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     setTimeout(() => this.searchField.setValue(''));
   }
+
+  trackByFn(i: number, photo: Photo) {
+    return photo.id;
+  }
 }
 
 export interface Photo {
